@@ -1,0 +1,75 @@
+{% extends "./layout/layout.html" %} {% block content %}
+<div class="w-100 bg-light">
+  <main class="container p-3">
+    <div class="d-flex align-items-start">
+      <div
+        class="nav flex-column nav-pills me-3 nav-class"
+        id="v-pills-tab"
+        role="tablist"
+        aria-orientation="vertical"
+      >
+        {% for item in list %}
+        <button
+          class="nav-link {% if loop.index === 1 %} active {% endif %}"
+          id="v-pills-{{loop.index}}-tab"
+          data-bs-toggle="pill"
+          data-bs-target="#v-pills-{{loop.index}}"
+          type="button"
+          role="tab"
+          aria-controls="v-pills-{{loop.index}}"
+          aria-selected="{% if loop.index === 1 %} true {% else %} false {% endif %}"
+          style="min-width: 10rem"
+        >
+          {{item.name}}
+        </button>
+        {% endfor %}
+      </div>
+      <div class="tab-content" id="v-pills-tabContent">
+        {% for key, val in listData %}
+        <div
+          class="
+            tab-pane
+            fade
+            {%
+            if
+            loop.index
+            ===
+            1
+            %}
+            show
+            active
+            {%
+            endif
+            %}
+          "
+          id="v-pills-{{loop.index}}"
+          role="tabpanel"
+          aria-labelledby="v-pills-{{loop.index}}-tab"
+        >
+          <div class="row gy-3 gx-3">
+            {% for child in val %}
+            <div class="col-3">
+              <a href="/product/{{child.product_id}}">
+                <div class="card">
+                  <img
+                    src="../public/images/spider/{{child.product_id}}.jpg"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <p class="card-title text-center text-dark">{{child.name}}</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            {% endfor %}
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </main>
+</div>
+
+{% endblock %}

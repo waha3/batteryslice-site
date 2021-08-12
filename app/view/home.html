@@ -1,149 +1,25 @@
-{{> meta }}
-<header>
-  <div class="collapse bg-dark" id="navbarHeader">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-8 col-md-7 py-4">
-          <h4 class="text-white">About</h4>
-          <p class="text-muted">
-            Add some information about the album below, the author, or any other
-            background context. Make it a few sentences long so folks can pick
-            up some informative tidbits. Then, link them off to some social
-            networking sites or contact information.
-          </p>
-        </div>
-        <div class="col-sm-4 offset-md-1 py-4">
-          <h4 class="text-white">Contact</h4>
-          <ul class="list-unstyled">
-            <li><a href="#" class="text-white">Follow on Twitter</a></li>
-            <li><a href="#" class="text-white">Like on Facebook</a></li>
-            <li><a href="#" class="text-white">Email me</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="navbar navbar-dark bg-dark shadow-sm">
-    <div class="container">
-      <a href="#" class="navbar-brand d-flex align-items-center">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="20"
-          height="20"
-          fill="none"
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          aria-hidden="true"
-          class="me-2"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"
-          />
-          <circle cx="12" cy="13" r="4" />
-        </svg>
-        <strong>Album</strong>
-      </a>
-      <a href="#" class="navbar-brand d-flex align-items-center">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="20"
-          height="20"
-          fill="none"
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          aria-hidden="true"
-          class="me-2"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"
-          />
-          <circle cx="12" cy="13" r="4" />
-        </svg>
-        <strong>Album</strong>
-      </a>
-      <a href="#" class="navbar-brand d-flex align-items-center">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="20"
-          height="20"
-          fill="none"
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          aria-hidden="true"
-          class="me-2"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"
-          />
-          <circle cx="12" cy="13" r="4" />
-        </svg>
-        <strong>Album</strong>
-      </a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarHeader"
-        aria-controls="navbarHeader"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    </div>
-  </div>
-</header>
-
-<header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-  <a
-    href="/"
-    class="
-      d-flex
-      align-items-center
-      mb-3 mb-md-0
-      me-md-auto
-      text-dark text-decoration-none
-    "
-  >
-    <svg class="bi me-2" width="40" height="32">
-      <use xlink:href="#bootstrap" />
-    </svg>
-    <span class="fs-4">苏州福莱尔光伏科技有限公司</span>
-  </a>
-
-  <ul class="nav nav-pills">
-    <li class="nav-item">
-      <a href="/" class="nav-link active" aria-current="page">公司首页</a>
-    </li>
-    <li class="nav-item"><a href="#" class="nav-link">关于公司</a></li>
-    <li class="nav-item"><a href="#" class="nav-link">硅片回收</a></li>
-    <li class="nav-item"><a href="#" class="nav-link">电池片回收</a></li>
-    <li class="nav-item"><a href="#" class="nav-link">联系方式</a></li>
-  </ul>
-</header>
-
+{% extends "./layout/layout.html" %} {% block content %}
 <main>
-  <section class="py-5 text-center container">
+  <section class="banner py-5 text-center container">
     <div class="row py-lg-5">
       <div class="col-lg-6 col-md-8 mx-auto">
-        <h1 class="fw-light">Album example</h1>
-        <p class="lead text-muted">
-          Something short and leading about the collection below—its contents,
-          the creator, etc. Make it short and sweet, but not too short so folks
-          don’t simply skip over it entirely.
+        <h1 class="fw-light banner-text">高价回收</h1>
+        <p class="lead banner-text">
+          光伏组件回收，光伏回收，太阳能板回收，太阳能组件回收，破碎太阳能板回收，电池片回收，逆变器回收，常年现金高价回收光伏电站，进口/国产原生硅，太阳能电池片，单晶电池片，多晶电池片。
         </p>
         <p>
-          <a href="#" class="btn btn-primary my-2">Main call to action</a>
-          <a href="#" class="btn btn-secondary my-2">Secondary action</a>
+          <a href="tel:+15195222665" class="btn btn-primary my-2">电话联系</a>
+          <button
+            type="button"
+            class="btn btn-secondary btn-success my-2"
+            data-bs-container="body"
+            data-bs-toggle="popover"
+            data-bs-placement="top"
+            data-bs-html="true"
+            data-bs-content='<div class="ecode"><img src="../public/images/wechat.jpeg" alt="" srcset=""></div>'
+          >
+            微信联系
+          </button>
         </p>
       </div>
     </div>
@@ -151,279 +27,51 @@
 
   <div class="album py-5 bg-light">
     <div class="container">
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3">
+        {% for item in list %}
         <div class="col">
-          <div class="card shadow-sm">
-            <div class="card-body">
-              <p class="card-text">
-                This is a wider card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button
-                    type="button"
-                    class="btn btn-sm btn-outline-secondary"
-                  >
-                    View
-                  </button>
-                  <button
-                    type="button"
-                    class="btn btn-sm btn-outline-secondary"
-                  >
-                    Edit
-                  </button>
-                </div>
-                <small class="text-muted">9 mins</small>
+          <a href="/product/{{item.product_id}}">
+            <div class="card shadow-sm">
+              <img
+                class="product-image"
+                src="../public/images/spider/{{item.product_id}}.jpg"
+                alt=""
+                srcset=""
+              />
+              <div class="card-body">
+                <p class="text-center card-title text-dark text-no-decoration">
+                  {{item.name}}
+                </p>
               </div>
             </div>
-          </div>
+          </a>
         </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <div class="card-body">
-              <p class="card-text">
-                This is a wider card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button
-                    type="button"
-                    class="btn btn-sm btn-outline-secondary"
-                  >
-                    View
-                  </button>
-                  <button
-                    type="button"
-                    class="btn btn-sm btn-outline-secondary"
-                  >
-                    Edit
-                  </button>
-                </div>
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <div class="card-body">
-              <p class="card-text">
-                This is a wider card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button
-                    type="button"
-                    class="btn btn-sm btn-outline-secondary"
-                  >
-                    View
-                  </button>
-                  <button
-                    type="button"
-                    class="btn btn-sm btn-outline-secondary"
-                  >
-                    Edit
-                  </button>
-                </div>
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card shadow-sm">
-            <div class="card-body">
-              <p class="card-text">
-                This is a wider card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button
-                    type="button"
-                    class="btn btn-sm btn-outline-secondary"
-                  >
-                    View
-                  </button>
-                  <button
-                    type="button"
-                    class="btn btn-sm btn-outline-secondary"
-                  >
-                    Edit
-                  </button>
-                </div>
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <div class="card-body">
-              <p class="card-text">
-                This is a wider card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button
-                    type="button"
-                    class="btn btn-sm btn-outline-secondary"
-                  >
-                    View
-                  </button>
-                  <button
-                    type="button"
-                    class="btn btn-sm btn-outline-secondary"
-                  >
-                    Edit
-                  </button>
-                </div>
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <div class="card-body">
-              <p class="card-text">
-                This is a wider card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button
-                    type="button"
-                    class="btn btn-sm btn-outline-secondary"
-                  >
-                    View
-                  </button>
-                  <button
-                    type="button"
-                    class="btn btn-sm btn-outline-secondary"
-                  >
-                    Edit
-                  </button>
-                </div>
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card shadow-sm">
-            <div class="card-body">
-              <p class="card-text">
-                This is a wider card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button
-                    type="button"
-                    class="btn btn-sm btn-outline-secondary"
-                  >
-                    View
-                  </button>
-                  <button
-                    type="button"
-                    class="btn btn-sm btn-outline-secondary"
-                  >
-                    Edit
-                  </button>
-                </div>
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <div class="card-body">
-              <p class="card-text">
-                This is a wider card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button
-                    type="button"
-                    class="btn btn-sm btn-outline-secondary"
-                  >
-                    View
-                  </button>
-                  <button
-                    type="button"
-                    class="btn btn-sm btn-outline-secondary"
-                  >
-                    Edit
-                  </button>
-                </div>
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <div class="card-body">
-              <p class="card-text">
-                This is a wider card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button
-                    type="button"
-                    class="btn btn-sm btn-outline-secondary"
-                  >
-                    View
-                  </button>
-                  <button
-                    type="button"
-                    class="btn btn-sm btn-outline-secondary"
-                  >
-                    Edit
-                  </button>
-                </div>
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
+        {% endfor %}
       </div>
+      <nav aria-label="navigation" class="navigation">
+        <ul class="pagination">
+          <li class="page-item {% if page <= 1 %} disabled {% endif %}">
+            <a
+              class="page-link"
+              href="?page={{page - 1}}"
+              aria-label="Previous"
+            >
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+          </li>
+          {% for item in range(1, pageSum + 1) %}
+          <li class="page-item {% if page == item %} active {% endif %}">
+            <a class="page-link" href="?page={{item}}">{{item}}</a>
+          </li>
+          {% endfor %}
+          <li class="page-item {% if page >= pageSum %} disabled {% endif %}">
+            <a class="page-link" href="?page={{page + 1}}" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
     </div>
   </div>
 </main>
-
-<footer class="text-muted py-5">
-  <div class="container">
-    <p class="float-end mb-1">
-      <a href="#">Back to top</a>
-    </p>
-    <p class="mb-1">
-      Album example is &copy; Bootstrap, but please download and customize it
-      for yourself!
-    </p>
-    <p class="mb-0">
-      New to Bootstrap? <a href="/">Visit the homepage</a> or read our
-      <a href="">getting started guide</a>.
-    </p>
-  </div>
-</footer>
-{{> footer }}
+{% endblock %}

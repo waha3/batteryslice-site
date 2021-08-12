@@ -1,0 +1,139 @@
+{% extends "./layout/layout.html" %} {% block content %}
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto bg-light">
+  <main class="px-3">
+    <h2 class="card-title">{{detail.type}}</h2>
+
+    <div class="card">
+      <img
+        src="../public/images/spider/{{detail.product_id}}.jpg"
+        class="card-img-top"
+        alt="..."
+      />
+      <div class="card-body">
+        <h5 class="card-title">{{detail.name}}</h5>
+
+        <p class="card-text">{{detail.desc.split('@@@').join('\n')}}</p>
+        <a
+          class="btn btn-danger float-end"
+          data-bs-toggle="modal"
+          data-bs-target="#shop_modal"
+        >
+          在线订购
+        </a>
+      </div>
+    </div>
+  </main>
+</div>
+
+<div class="modal" id="shop_modal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <form id="shop_modal_form" class="needs-validation" novalidate>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">订单</h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          />
+        </div>
+        <div class="modal-body">
+          <div class="row mb-3">
+            <label for="sum" class="col-sm-2 col-form-label">订购产品</label>
+            <div class="col-sm-10">
+              <span class="form-control-plaintext text-primary"
+                >{{detail.name}}</span
+              >
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="sum" class="col-sm-2 col-form-label">订购数量</label>
+            <div class="col-sm-3">
+              <input
+                type="number"
+                class="form-control"
+                name="sum"
+                required
+                min="1"
+              />
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="contact" class="col-sm-2 col-form-label">联系人</label>
+            <div class="col-sm-3">
+              <input type="text" class="form-control" name="contact" />
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="address" class="col-sm-2 col-form-label"
+              >联系地址</label
+            >
+            <div class="col-sm-5">
+              <input type="text" class="form-control" name="address" />
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="phone" class="col-sm-2 col-form-label">联系电话</label>
+            <div class="col-sm-5">
+              <input type="tel" class="form-control" name="phone" />
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="email" class="col-sm-2 col-form-label">邮箱</label>
+            <div class="col-sm-5">
+              <input type="email" class="form-control" name="email" required />
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="wechat" class="col-sm-2 col-form-label">微信号</label>
+            <div class="col-sm-5">
+              <input type="text" class="form-control" name="wechat" />
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="wechat" class="col-sm-2 col-form-label">验证码</label>
+            <div class="col-sm-3">
+              <input
+                id="vercode_data"
+                name="vercode_data"
+                class="form-control"
+                type="text"
+                maxlength="4"
+                autocomplete="disabled"
+                required
+              />
+              <span id="vercode" class="form-control-plaintext"></span>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" id="shop_modal_submit">
+            提交
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div aria-live="polite" aria-atomic="true" class="bg-dark">
+  <div
+    class="
+      toast-container
+      position-absolute
+      p-3
+      translate-middle-x
+      top-0
+      start-50
+    "
+    id="toastPlacement"
+    style="z-index: 10000"
+  >
+    <div id="toast" class="toast">
+      <div class="toast-body"><div class="slot"></div></div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

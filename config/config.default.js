@@ -3,14 +3,9 @@
 
 'use strict';
 
-/**
- * @param {Egg.EggAppInfo} appInfo app info
- */
-module.exports = (appInfo) => {
-  /**
-   * built-in config
-   * @type {Egg.EggAppConfig}
-   **/
+// const path = require('path');
+
+module.exports = appInfo => {
   const config = (exports = {});
 
   // use for cookie sign key, should change to your own and keep security
@@ -19,33 +14,35 @@ module.exports = (appInfo) => {
   // add your middleware config here
   config.middleware = [];
 
+  // config.view = {
+  //   defaultViewEngine: 'handlebars',
+  //   defaultExtension: '.html',
+  //   mapping: {
+  //     '.hbs': 'handlebars',
+  //     '.html': 'handlebars',
+  //   },
+  // };
+
+  // config.handlebars = {
+  //   partialsPath: path.join(appInfo.baseDir, 'app/view/partials'),
+  //   knownHelpersOnly: false,
+  // };
+
   config.view = {
-    defaultViewEngine: 'handlebars',
-    defaultExtension: '.hbs',
+    defaultViewEngine: 'nunjucks',
+    defaultExtension: '.html',
     mapping: {
-      '.hbs': 'handlebars',
-      '.html': 'handlebars',
+      '.tpl': 'nunjucks',
+      '.nj': 'nunjucks',
+      '.html': 'nunjucks',
     },
   };
 
-  config.mysql = {
-    // 单数据库信息配置
-    client: {
-      // host
-      host: 'mysql.com',
-      // 端口号
-      port: '3306',
-      // 用户名
-      user: 'test_user',
-      // 密码
-      password: 'test_password',
-      // 数据库名
-      database: 'test',
-    },
-    // 是否加载到 app 上，默认开启
-    app: true,
-    // 是否加载到 agent 上，默认关闭
-    agent: false,
+  config.sequelize = {
+    dialect: 'mysql',
+    host: '127.0.0.1',
+    port: 3306,
+    database: 'battery_site',
   };
 
   return {
