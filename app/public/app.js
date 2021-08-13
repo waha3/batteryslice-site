@@ -43,9 +43,10 @@ function resetVerCode() {
 
 function make() {
   var myModalEl = document.getElementById('shop_modal');
-  myModalEl.addEventListener('show.bs.modal', function (event) {
-    setVerCode();
-  });
+  myModalEl &&
+    myModalEl.addEventListener('show.bs.modal', function (event) {
+      setVerCode();
+    });
 }
 
 function saveOrder() {
