@@ -7,7 +7,9 @@ const path = require('path');
 const url = 'http://www.ksjll.com';
 
 module.exports = async () => {
-  const browser = await puppeteer.launch();
+  const browser = await puppeteer.launch({
+    args: ['--no-sandbox', '--disable-setuid-sandbox'],
+  });
 
   const sleep = num => {
     return new Promise(resolve => {

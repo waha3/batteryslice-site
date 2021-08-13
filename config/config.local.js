@@ -4,7 +4,7 @@ module.exports = () => {
   const config = (exports = {});
 
   config.crawler = {
-    immediate: false,
+    immediate: true,
   };
 
   return {
