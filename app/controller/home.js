@@ -11,13 +11,19 @@ class HomeController extends Controller {
 
     const list = await ctx.model.Products.findAll({
       raw: true,
-      limit,
-      offset: (page - 1) * limit,
     });
+    const sortedList = list
+      .sort(val => {
+        if (val.type === 2 || val.type === 8) {
+          return -1;
+        }
+        return 0;
+      })
+      .slice((page - 1) * limit, page * limit);
 
     const count = await ctx.model.Products.count();
     await ctx.render('../view/home.html', {
-      list,
+      list: sortedList,
       pageSum: Math.ceil(count / limit),
       page: Number(page),
     });
@@ -33,6 +39,7 @@ class HomeController extends Controller {
       order: [['type', 'ASC']],
       raw: true,
     });
+
     const formatedData = listData.reduce((acc, val) => {
       if (acc[val.type]) {
         acc[val.type].push(val);
