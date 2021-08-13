@@ -8,7 +8,7 @@ module.exports = app => {
     schedule: {
       interval: '0.5y',
       type: 'all',
-      immediate: app.config.schedule.immediate,
+      immediate: app.config.crawler.immediate,
       disable: false,
     },
     async task(ctx) {
